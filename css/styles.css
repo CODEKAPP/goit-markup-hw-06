@@ -119,6 +119,7 @@ body {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
+    letter-spacing: 0.06em;
     /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
     border-radius: 4px;
     border: none;
@@ -133,7 +134,8 @@ body {
 .main-section-characteristics-titles {
     text-transform: uppercase;
 }
-.button-property .main-section-characteristics-titles {
+.button-property,
+.main-section-characteristics-titles {
     font-weight: 700;
     line-height: 1.14;
 }
@@ -155,10 +157,10 @@ body {
     font-size: 16px;
     line-height: 1.18;
 }
-.section-all-content-images-size {
+/* .section-all-content-images-size {
     width: 370px;
     height: 294px;
-}
+} */
 .section-all-content-description {
     font-weight: 700;
     font-size: 18px;
@@ -172,18 +174,17 @@ body {
 .header-contacts,
 .main-section-characteristics-description,
 .main-section-team-description,
-.section-all-content-type,
-.main-section-characteristics-titles-puntuality {
+.section-all-content-type {
     color: #757575;
 }
-.main-section-images-size {
+/* .main-section-images-size {
     width: 373.16px;
     height: 323.7px;
-}
-.main-section-team-images-size {
+} */
+/* .main-section-team-images-size {
     width: 270px;
     height: 260px;
-}
+} */
 .main-section-team-list {
     text-align: center;
     /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2); */
