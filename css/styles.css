@@ -42,6 +42,7 @@ body {
 .footer-address-phone,
 .main-section-characteristics-description {
     line-height: 1.71;
+    font-style: normal;
 }
 .logo-link,
 .logo-link:hover,
@@ -65,6 +66,13 @@ body {
 .footer-address-phone:active {
     color: var(--main-color-blue);
     outline: none;
+}
+.list-none .header-nav-links.header-nav-links-active {
+    color: var(--main-color-blue);
+}
+.list-none .section-menu-links.section-menu-links-button-active{
+color: var(--main-color-white);
+    background: var(--main-color-blue);
 }
 .section-menu-links {
     font-weight: 500;
@@ -134,7 +142,6 @@ body {
 .main-section-characteristics-titles {
     text-transform: uppercase;
 }
-.button-property,
 .main-section-characteristics-titles {
     font-weight: 700;
     line-height: 1.14;
@@ -200,6 +207,10 @@ body {
 .footer-address-phone,
 .footer-address-mail {
     color: rgba(255, 255, 255, 0.6);
+}
+#portafolio  #todo:target:not(active)
+{
+    background-color: red;
 }
 /* Importar Fuentes https://fonts.google.com 
 GitHub-repositories
