@@ -70,8 +70,8 @@ body {
 .list-none .header-nav-links.header-nav-links-active {
     color: var(--main-color-blue);
 }
-.list-none .section-menu-links.section-menu-links-button-active{
-color: var(--main-color-white);
+.list-none .section-menu-links.section-menu-links-button-active {
+    color: var(--main-color-white);
     background: var(--main-color-blue);
 }
 .section-menu-links {
@@ -208,8 +208,7 @@ color: var(--main-color-white);
 .footer-address-mail {
     color: rgba(255, 255, 255, 0.6);
 }
-#portafolio  #todo:target:not(active)
-{
+#portafolio #todo:target:not(active) {
     background-color: red;
 }
 /* Importar Fuentes https://fonts.google.com 
