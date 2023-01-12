@@ -12,7 +12,7 @@
     --main-color-blue: #2196f3;
     --main-color-white: #fff;
     --main-text: 'Raleway';
-    --main-color-header:#ECECEC;
+    --main-color-header: #ececec;
 }
 body {
     font-family: Roboto, sans-serif;
@@ -36,6 +36,7 @@ p {
 .header-container,
 .header-container-nav,
 .header-container-nav-list,
+.header-container-contacts,
 .header-container-contacts-list,
 .main-section-characteristics-list,
 .main-section-images,
@@ -45,54 +46,14 @@ p {
 header {
     display: flex;
 }
-.section-all-content {
-    flex-wrap: wrap;
-    gap: 26px;
-}
-.section-menu-links{
-    padding: 6px 0;
-}
-#todo{
-    padding-right: 18px;
-    padding-left: 17px;
-}
-#sitios-web{
-    padding-right: 24px;
-    padding-left: 24px;
-}
-#marketing{
-    padding-right: 26px;
-    padding-left: 27px;
-}
-#design{
-    padding-right: 26px;
-    padding-left: 25px;
-}
-#application{
-    padding-right: 24px;
-    padding-left: 23px;
-}
-#todo{
-    padding-right: px;
-    padding-left: px;
-}
-
-.section-all-content-description{
-    max-width: 370px;
-    padding: 20px 0 4px 24px;
-}
-.section-all-content-type{
-    padding-bottom: 20px;
-    padding-left: 24px;
-}
-
-.section-menu-links-aling {
-    justify-content: center;
-    padding-bottom: 34px;
-    gap: 8px;
+.header-container,
+.header-contacts,
+.header-container-nav-list {
+    align-items: center;
 }
 .header-container-contacts-list {
-    justify-content: end;
+    margin-left: 344px;
+    align-items: center;
 }
 .container {
     width: 1200px;
@@ -105,74 +66,41 @@ header {
     padding-bottom: 94px;
 }
 .header-container-nav > .logo-link {
-    margin: 24px 93px 25px 215px;
+    margin-right: 93px;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
-.header-container-nav-list,
-.container-contacts-list {
-    margin: 32px 0;
+.header-color {
+    border-bottom: 1px solid var(--main-color-header);
+}
+.container-nav-list {
+    padding: 32px 0;
 }
 .container-nav-list:not(:first-child, :last-child) {
     margin: 0 50px;
 }
-.container-contacts-list:not(:first-child) {
-    margin-left: 0px;
-}
 .container-contacts-list:last-child {
-    margin-right: 219px;
     margin-left: 50px;
 }
-.main-section-button {
-    padding: 10px 32px;
+.container-imagenes-team {
+    padding: 30px 0;
 }
-.main-section-characteristics,
-.main-section-profession {
-    margin-top: 0 215px 0 215px;
-}
-.characteristics-list {
-    margin-right: 30px;
-}
-.main-section-characteristics-titles {
-    padding-bottom: 10px;
-}
-.section-list-images:first-child {
-    margin-right: 30.26px;
-}
-.section-list-images:last-child {
-    margin-left: 23.42px;
-}
-.main-section-team-list:nth-child(2) {
-    margin: 0 37px;
-}
-.main-section-team-list:last-child {
-    margin-left: 23px;
-}
-.main-section-title {
-    padding-bottom: 55.5px;
-}
-.main-section-images-size {
-    justify-content: space-between;
-}
-.main-section-team-titles{
-    padding: 30px 0 10px;
-}
-.main-section-team-description{
-    padding-bottom: 30px;
-}
-.footer-reference-data{
+.footer-reference-data {
     padding-top: 60px;
     padding-bottom: 60px;
 }
 .footer-logo-link {
-    padding-bottom: 9px;
+    margin-bottom: 9px;
+}
+.footer-address-location {
+    margin-bottom: 27px;
+}
+.footer-list:first-child {
+    margin-bottom: 2px;
 }
 .button-property {
     cursor: pointer;
-}
-.header-color{
-    border-bottom: 1px solid var(--main-color-header);  
-}
-.section-menu{
-    padding-top: 106px;
 }
 .list-none {
     list-style: none;
@@ -191,6 +119,7 @@ header {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    padding: 32px 0;
 }
 .footer-address-location,
 .footer-address-mail,
@@ -238,6 +167,7 @@ header {
     border-radius: 4px;
     border: none;
     font-family: inherit;
+    padding: 6px 0;
 }
 .section-menu-links-aling,
 .main-section-images {
@@ -275,9 +205,12 @@ header {
     font-size: 44px;
     line-height: 1.36;
     text-transform: uppercase;
+    padding-top: 196px;
+    margin-bottom: 30px;
 }
-.container.main-container-title-body{
+.container.main-container-title-body {
     max-width: 696px;
+    padding-bottom: 106px;
 }
 .main-section-button {
     color: var(--main-color-white);
@@ -290,6 +223,7 @@ header {
     border-radius: 4px;
     border: none;
     font-family: inherit;
+    padding: 10px 32px;
 }
 .main-section-button:hover,
 .main-section-button:focus,
@@ -298,17 +232,33 @@ header {
     outline: none;
 }
 .main-section-characteristics-titles {
-    text-transform: uppercase;
-}
-.main-section-characteristics-titles {
     font-weight: 700;
     line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.main-section-characteristics-list,
+.main-section-team-professional-list {
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.main-section-images {
+    flex-wrap: wrap;
+    gap: 25.29px;
+}
+.section-list-images {
+    flex-basis: calc((100% - 50.58px) / 3);
+}
+.characteristics-list,
+.main-section-team-professional-list {
+    flex-basis: calc((100% - 90px) / 4);
 }
 .main-section-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
+    margin-bottom: 55.5px;
 }
 .main-section-team {
     background-color: #f5f4fa;
@@ -321,11 +271,8 @@ header {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
+    margin-bottom: 10px;
 }
-/* .section-all-content-images-size {
-    width: 370px;
-    height: 294px;
-} */
 .section-all-content-description {
     font-weight: 700;
     font-size: 18px;
@@ -342,14 +289,6 @@ header {
 .section-all-content-type {
     color: #757575;
 }
-/* .main-section-images-size {
-    width: 373.16px;
-    height: 323.7px;
-} */
-/* .main-section-team-images-size {
-    width: 270px;
-    height: 260px;
-} */
 .main-section-team-list {
     text-align: center;
     /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2); */
@@ -369,11 +308,44 @@ header {
 #portafolio #todo:target:not(active) {
     background-color: red;
 }
+.section-menu-links-aling {
+    justify-content: center;
+    margin-bottom: 34px;
+    gap: 8px;
+}
+.section-all-content {
+    flex-wrap: wrap;
+    gap: 26px;
+}
+#todo {
+    padding-right: 18px;
+    padding-left: 17px;
+}
+#sitios-web {
+    padding-right: 24px;
+    padding-left: 24px;
+}
+#marketing {
+    padding-right: 26px;
+    padding-left: 27px;
+}
+#design {
+    padding-right: 26px;
+    padding-left: 25px;
+}
+#application {
+    padding-right: 24px;
+    padding-left: 23px;
+}
+.container-imagenes-all {
+    padding: 20px 0 20px 24px;
+    max-width: 370px;
+}
 /* Importar Fuentes https://fonts.google.com 
 GitHub-repositories
-https://github.com/CODEKAPP/goit-markup-hw-02
+https://github.com/CODEKAPP/goit-markup-hw-03
 GitHub-Pages
-https://codekapp.github.io/goit-markup-hw-02/
+https://codekapp.github.io/goit-markup-hw-03/
 
 */
 
