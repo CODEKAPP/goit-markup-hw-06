@@ -2,11 +2,17 @@
     /▌ . H e l l o . . . Estilos Base CCS 
     / \
 |☠| ¯\_(ツ)_/¯ |☠| ಠ_ಠ |☠| ƪ (ړ ײ) ƪ |☠| <(^ _ ^)>|☠| (ง • ̀_ • ́) ง |☠| */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
 :root {
     --main-color-black: #212121;
     --main-color-blue: #2196f3;
     --main-color-white: #fff;
     --main-text: 'Raleway';
+    --main-color-header:#ECECEC;
 }
 body {
     font-family: Roboto, sans-serif;
@@ -15,12 +21,161 @@ body {
     font-size: 14px;
     letter-spacing: 0.03em;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+.header-container,
+.header-container-nav,
+.header-container-nav-list,
+.header-container-contacts-list,
+.main-section-characteristics-list,
+.main-section-images,
+.main-section-team-professional-list,
+.section-menu-links-aling,
+.section-all-content,
+header {
+    display: flex;
+}
+.section-all-content {
+    flex-wrap: wrap;
+    gap: 26px;
+}
+.section-menu-links{
+    padding: 6px 0;
+}
+#todo{
+    padding-right: 18px;
+    padding-left: 17px;
+}
+#sitios-web{
+    padding-right: 24px;
+    padding-left: 24px;
+}
+#marketing{
+    padding-right: 26px;
+    padding-left: 27px;
+}
+#design{
+    padding-right: 26px;
+    padding-left: 25px;
+}
+#application{
+    padding-right: 24px;
+    padding-left: 23px;
+}
+#todo{
+    padding-right: px;
+    padding-left: px;
+}
+
+.section-all-content-description{
+    max-width: 370px;
+    padding: 20px 0 4px 24px;
+}
+.section-all-content-type{
+    padding-bottom: 20px;
+    padding-left: 24px;
+}
+
+.section-menu-links-aling {
+    justify-content: center;
+    padding-bottom: 34px;
+    gap: 8px;
+}
+.header-container-contacts-list {
+    justify-content: end;
+}
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.header-container-nav > .logo-link {
+    margin: 24px 93px 25px 215px;
+}
+.header-container-nav-list,
+.container-contacts-list {
+    margin: 32px 0;
+}
+.container-nav-list:not(:first-child, :last-child) {
+    margin: 0 50px;
+}
+.container-contacts-list:not(:first-child) {
+    margin-left: 0px;
+}
+.container-contacts-list:last-child {
+    margin-right: 219px;
+    margin-left: 50px;
+}
+.main-section-button {
+    padding: 10px 32px;
+}
+.main-section-characteristics,
+.main-section-profession {
+    margin-top: 0 215px 0 215px;
+}
+.characteristics-list {
+    margin-right: 30px;
+}
+.main-section-characteristics-titles {
+    padding-bottom: 10px;
+}
+.section-list-images:first-child {
+    margin-right: 30.26px;
+}
+.section-list-images:last-child {
+    margin-left: 23.42px;
+}
+.main-section-team-list:nth-child(2) {
+    margin: 0 37px;
+}
+.main-section-team-list:last-child {
+    margin-left: 23px;
+}
+.main-section-title {
+    padding-bottom: 55.5px;
+}
+.main-section-images-size {
+    justify-content: space-between;
+}
+.main-section-team-titles{
+    padding: 30px 0 10px;
+}
+.main-section-team-description{
+    padding-bottom: 30px;
+}
+.footer-reference-data{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.footer-logo-link {
+    padding-bottom: 9px;
+}
 .button-property {
     cursor: pointer;
 }
+.header-color{
+    border-bottom: 1px solid var(--main-color-header);  
+}
+.section-menu{
+    padding-top: 106px;
+}
 .list-none {
     list-style: none;
-    text-align: ;
 }
 .header-nav-links {
     color: var(--main-color-black);
@@ -120,6 +275,9 @@ body {
     font-size: 44px;
     line-height: 1.36;
     text-transform: uppercase;
+}
+.container.main-container-title-body{
+    max-width: 696px;
 }
 .main-section-button {
     color: var(--main-color-white);
