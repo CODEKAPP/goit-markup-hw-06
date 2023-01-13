@@ -52,7 +52,7 @@ header {
     align-items: center;
 }
 .header-container-contacts-list {
-    margin-left: 344px;
+    margin-left: auto;
     align-items: center;
 }
 .container {
@@ -63,6 +63,9 @@ header {
 }
 .section {
     padding-top: 94px;
+    padding-bottom: 94px;
+}
+.main-section-profession{
     padding-bottom: 94px;
 }
 .header-container-nav > .logo-link {
@@ -77,8 +80,8 @@ header {
 .container-nav-list {
     padding: 32px 0;
 }
-.container-nav-list:not(:first-child, :last-child) {
-    margin: 0 50px;
+.container-nav-list:not(:last-child) {
+    margin-right: 50px;
 }
 .container-contacts-list:last-child {
     margin-left: 50px;
@@ -92,12 +95,15 @@ header {
 }
 .footer-logo-link {
     margin-bottom: 9px;
+    display: block;
 }
 .footer-address-location {
-    margin-bottom: 27px;
+    margin-bottom: 2px;
+    display: block;
 }
 .footer-list:first-child {
     margin-bottom: 2px;
+    
 }
 .button-property {
     cursor: pointer;
@@ -189,6 +195,8 @@ header {
     text-decoration: none;
 }
 .main-section {
+    padding-top: 200px;
+    padding-bottom: 200px;
     text-align: center;
     letter-spacing: 0.06em;
 }
@@ -205,12 +213,10 @@ header {
     font-size: 44px;
     line-height: 1.36;
     text-transform: uppercase;
-    padding-top: 196px;
     margin-bottom: 30px;
 }
 .container.main-container-title-body {
     max-width: 696px;
-    padding-bottom: 106px;
 }
 .main-section-button {
     color: var(--main-color-white);
@@ -244,7 +250,7 @@ header {
 }
 .main-section-images {
     flex-wrap: wrap;
-    gap: 25.29px;
+    gap: 25.19px;
 }
 .section-list-images {
     flex-basis: calc((100% - 50.58px) / 3);
@@ -300,19 +306,21 @@ header {
 }
 .section-all-content-list {
     border: 1px solid #eee;
+    flex-basis: calc((100% - 78px ) / 3);
 }
 .footer-address-phone,
 .footer-address-mail {
     color: rgba(255, 255, 255, 0.6);
 }
-#portafolio #todo:target:not(active) {
-    background-color: red;
-}
 .section-menu-links-aling {
     justify-content: center;
     margin-bottom: 34px;
+    flex-wrap: wrap;
     gap: 8px;
 }
+/* .menu-links-list{
+    flex-basis: calc((100% - auto) / 5);
+} */
 .section-all-content {
     flex-wrap: wrap;
     gap: 26px;
@@ -338,7 +346,7 @@ header {
     padding-left: 23px;
 }
 .container-imagenes-all {
-    padding: 20px 0 20px 24px;
+    padding: 20px 24px 20px 24px;
     max-width: 370px;
 }
 /* Importar Fuentes https://fonts.google.com 
