@@ -361,7 +361,10 @@ header {
 }
 
 .section-customers {
-    padding: 59px 215px 151px;
+    padding: 59px 0 151px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .main-section-customers-list-icons,
 .section-customers-container {
