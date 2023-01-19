@@ -53,8 +53,10 @@ header {
 }
 .header-container,
 .header-contacts,
-.header-container-nav-list {
+.header-container-nav-list,
+.container-contacts-list > .header-contacts {
     align-items: center;
+    display: inline-flex;
 }
 .header-container-contacts-list {
     margin-left: auto;
@@ -161,11 +163,7 @@ header {
 .footer-address-location:active,
 .footer-address-phone:hover,
 .footer-address-phone:focus,
-.footer-address-phone:active,
-.container-contacts-list:hover,
-.container-contacts-list:focus > a > svg > use,
-.container-contacts-list:active > a > svg > use,
-.container-contacts-list:target > a > svg > use {
+.footer-address-phone:active {
     color: var(--main-color-blue);
     outline: none;
     fill: var(--main-color-blue);
@@ -224,8 +222,9 @@ header {
     text-align: center;
     letter-spacing: 0.06em;
     background: rgba(47, 48, 58, 0.4) url(../images/meeting.jpg);
-    background-size: 1600px 600px;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 .main-section-title-body,
 .footer-address-location {
@@ -272,10 +271,14 @@ header {
     gap: 30px;
 }
 .characteristics-list-icons {
-    padding: 25px 100px;
+    /* padding: 25px 100px; */
+    height: 120px;
     background-color: var(--main-color-background-white);
     margin-bottom: 30px;
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .main-section-images {
     flex-wrap: wrap;
@@ -284,24 +287,34 @@ header {
 .section-list-images {
     flex-basis: calc((100% - 50.58px) / 3);
 }
-.main-section-team-list-icons {
+/* .main-section-team-list-icons {
+    height: 44px;
+    padding: 0 32px;
+} */
+.footer-websites {
+    margin-top: 5px;
+    /* height: 80px;
+    width: 206px; */
+}
+.main-section-team-list-icons-professional {
+    flex-wrap: wrap;
+    gap: 10px;
     height: 44px;
     padding: 0 32px;
 }
-.footer-websites {
-    height: 80px;
-    width: 206px;
-}
-.main-section-team-list-icons-professional,
 .footer-websites-list-icons-links {
     flex-wrap: wrap;
     gap: 10px;
+    /* height: 44px; */
+    /* padding: 0 32px; */
 }
 .list-icons-team {
     flex-basis: calc((100% - 30px) / 4);
     background-color: var(--main-color-white);
     /* background-color: var(--main-color-blue); */
     fill: var(--main-color-background-icons);
+}
+.list-icons-team-size {
     border-radius: 50%;
     height: 44px;
     width: 44px;
@@ -313,7 +326,7 @@ header {
     flex-basis: calc((100% - 30px) / 4);
     background: rgba(255, 255, 255, 0.1);
     fill: var(--main-color-background-white);
-    border-radius: 500%;
+    border-radius: 50%;
     width: 44px;
     height: 44px;
     display: flex;
@@ -332,24 +345,45 @@ header {
     align-items: center;
 }
 .list-icons-customers:hover,
-.list-icons-customers:focus > div > a > svg > use,
-.list-icons-customers:active > div > a > svg > use,
-.list-icons-customers:target > div > a > svg > use {
-    /* background-color: var(--main-color-blue); */
+.list-icons-customers-size:focus,
+.list-icons-customers-size:active,
+.list-icons-customers-size:target {
     fill: var(--main-color-blue);
     border: 1px solid var(--main-color-blue);
 }
+
+.list-icons-customers-size:focus,
+.list-icons-customers:focus {
+    fill: var(--main-color-blue);
+    border: 1px solid var(--main-color-blue);
+    outline: none;
+    text-decoration: none;
+}
+.list-icons-websites-size:focus,
+.list-icons-websites-size:active,
+.list-icons-websites-size:target,
+.list-icons-team-size:focus,
+.list-icons-team-size:active,
+.list-icons-team-size:target {
+    fill: var(--main-color-white);
+    padding: 12px;
+    border-radius: 100%;
+    display: flex;
+    background-color: var(--main-color-blue);
+    outline: none;
+    text-decoration: none;
+}
+
 .list-icons-team:hover,
-.icon-active:focus,
-.list-icons-team:focus > a > svg > use,
-.list-icons-team:active > a > svg > use,
-.list-icons-team:target > a > svg > use,
-.list-icons-websites:hover,
-.list-icons-websites:focus > a > svg > use,
-.list-icons-websites:active > a > svg > use,
-.list-icons-websites:target > a > svg > use {
+.list-icons-websites:hover {
     background-color: var(--main-color-blue);
     fill: var(--main-color-white);
+
+    border-radius: 50%;
+    background-color: var(--main-color-blue);
+    /* background: red; */
+    /* outline: none; */
+    text-decoration: none;
 }
 
 .main-section-title-customers {
