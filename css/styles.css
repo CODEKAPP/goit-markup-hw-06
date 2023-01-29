@@ -10,6 +10,7 @@
 :root {
     --main-color-black: #212121;
     --main-color-blue: #2196f3;
+    --main-color-blue-90: rgba(33, 150, 243, 0.9);
     --main-color-white: #fff;
     --main-text: 'Raleway';
     --main-color-header: #ececec;
@@ -168,6 +169,7 @@ header {
     outline: none;
     fill: var(--main-color-blue);
 }
+
 .list-none .header-nav-links.header-nav-links-active {
     color: var(--main-color-blue);
 }
@@ -190,6 +192,51 @@ header {
 .main-section-images {
     text-align: center;
 }
+/*  */
+.data-modal-close-button {
+    background: #ffffff;
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+    /* box-sizing: border-box; */
+    border: none;
+    margin: 8px;
+}
+
+.modal {
+    margin: 221px auto;
+    width: 528px;
+    height: 581px;
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.data-modal-close-div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+.backdrop {
+    position: fixed;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: brown;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition-property: background-color, opacity, background, position;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
+}
+
 .section-menu-links:hover,
 .section-menu-links:focus,
 .section-menu-links:active,
@@ -198,6 +245,29 @@ header {
     background: var(--main-color-blue);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.section-all-content-list,
+.logo-link,
+.header-nav-links,
+.header-contacts,
+.footer-address-mail,
+.footer-address-location,
+.footer-address-phone,
+.section-menu-links,
+.main-section-button,
+.section-all-content-list,
+.list-icons-customers,
+.list-icons-team,
+.list-icons-websites,
+.section-all-content-list-information-div-text,
+.header-nav-links-after,
+.section-all-content-list {
+    transition-property: box-shadow, background-color, color, fill, background, border, border-radius, justify-content, align-items, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition-duration: 2050ms; */
+    /* transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08); */
+}
+
 .section-all-content-list:hover,
 .section-all-content-list:focus,
 .section-all-content-list:active,
@@ -406,6 +476,7 @@ header {
 
 .section-list-images {
     position: relative;
+    z-index: -1;
 }
 .section-list-images-background-title {
     font-weight: 700;
@@ -481,7 +552,61 @@ header {
 .section-all-content-list {
     border: 1px solid #eee;
     flex-basis: calc((100% - 78px) / 3);
+    /* test */
+    /* position: relative; */
+    /* overflow: hidden; */
 }
+
+.section-all-content-list-information-div {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.list-information-div-focus {
+    outline: none;
+    text-decoration: none;
+}
+.section-all-content-list:hover .section-all-content-list-information-div-text,
+.list-information-div-focus:focus .section-all-content-list-information-div-text {
+    transform: translatey(-100%);
+}
+
+.section-all-content-list-information-div-text {
+    position: absolute;
+    width: 370px;
+    height: 294px;
+    background-color: var(--main-color-blue-90);
+    transform: translatex(0%);
+    /* transition: transform 250ms ease; */
+}
+
+.information-div-text {
+    color: var(--main-color-background-white);
+    font-size: 18px;
+    line-height: 1.55;
+    margin: 63px 24px;
+}
+
+.header-nav-links-after {
+    position: relative;
+}
+.header-nav-links-after:hover::after,
+.header-nav-links:focus::after,
+.header-nav-links-active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background-color: var(--main-color-blue);
+}
+
 .footer-address-phone,
 .footer-address-mail {
     color: rgba(255, 255, 255, 0.6);
