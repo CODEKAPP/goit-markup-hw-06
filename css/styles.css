@@ -262,7 +262,7 @@ header {
 .header-nav-links-after,
 .section-all-content-list {
     transition-property: box-shadow, background-color, color, fill, background ;
-    /* border, border-radius, justify-content, align-items, transform */
+    
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     /* transition-duration: 2050ms; */
