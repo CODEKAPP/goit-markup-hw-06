@@ -194,6 +194,9 @@ header {
 }
 /*  */
 .data-modal-close-button {
+    position: absolute;
+    top: o;
+    right: 0;
     background: #ffffff;
     /* border: 1px solid rgba(0, 0, 0, 0.1); */
     /* box-sizing: border-box; */
@@ -202,9 +205,13 @@ header {
 }
 
 .modal {
-    margin: 221px auto;
+    /* margin: 221px 536px 222px ; */
+    position: absolute;
+    top: 221px;
+    left: 536px;
+    /* bottom: 222px; */
     width: 528px;
-    height: 581px;
+    height: 481px;
     background: #ffffff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -221,20 +228,21 @@ header {
     flex-direction: row-reverse;
     align-items: flex-start;
 }
-
 .backdrop {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* right: 0;
+    bottom: 0; */
     visibility: visible;
     background-color: rgba(0, 0, 0, 0.2);
-    color: brown;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transition-property: background-color, opacity, background, position;
+    /* color: brown; */
+    /* transition-property: background-color, opacity, background, position;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
+    transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08); */
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-menu-links:hover,
@@ -245,24 +253,39 @@ header {
     background: var(--main-color-blue);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.section-all-content-list,
 .logo-link,
 .header-nav-links,
 .header-contacts,
+.header-nav-links-after,
 .footer-address-mail,
 .footer-address-location,
-.footer-address-phone,
-.section-menu-links,
+.footer-address-phone {
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section-menu-links{
+    transition-property: box-shadow, background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.list-icons-customers{
+    transition-property:  border-color, border-radius, color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.list-icons-websites,
+.list-icons-team{
+    transition-property: background-color, color, fill, background, border-radius;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .main-section-button,
 .section-all-content-list,
-.list-icons-customers,
-.list-icons-team,
-.list-icons-websites,
-.section-all-content-list-information-div-text,
-.header-nav-links-after,
-.section-all-content-list {
-    transition-property: box-shadow, background-color, color, fill, background ;
-    
+.section-all-content-list-information-div,
+.section-all-content-list-information-div-text {
+    transition-property: box-shadow, transform, background-color, color, background;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     /* transition-duration: 2050ms; */
@@ -414,10 +437,12 @@ header {
 .list-icons-customers-size:active,
 .list-icons-customers-size:target {
     fill: var(--main-color-blue);
+    border-radius: 4px;
     border: 1px solid var(--main-color-blue);
 }
 .list-icons-customers-size:focus,
 .list-icons-customers:focus {
+    border-radius: 4px;
     fill: var(--main-color-blue);
     border: 1px solid var(--main-color-blue);
     outline: none;
@@ -475,7 +500,7 @@ header {
     margin-bottom: 20px;
 }
 
-.section-list-images {
+.section-list-images-div {
     position: relative;
     z-index: -1;
 }
@@ -484,6 +509,7 @@ header {
     font-size: 14px;
     line-height: 1.14;
     text-align: center;
+    display: block;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     padding: 27px 0;
@@ -558,6 +584,10 @@ header {
     /* overflow: hidden; */
 }
 
+.list-information-div-focus {
+    outline: none;
+    text-decoration: none;
+}
 .section-all-content-list-information-div {
     position: relative;
     margin-left: auto;
@@ -565,10 +595,6 @@ header {
     overflow: hidden;
 }
 
-.list-information-div-focus {
-    outline: none;
-    text-decoration: none;
-}
 .section-all-content-list:hover .section-all-content-list-information-div-text,
 .list-information-div-focus:focus .section-all-content-list-information-div-text {
     transform: translatey(-100%);
@@ -601,9 +627,10 @@ header {
     width: 100%;
     height: 4px;
     bottom: 0;
-    display: flex;
+    left: 0;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     border-radius: 2px;
     background-color: var(--main-color-blue);
 }
