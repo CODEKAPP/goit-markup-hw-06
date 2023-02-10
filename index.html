@@ -69,14 +69,97 @@
                     <!-- test -->
                     <div class="backdrop is-hidden backdrop-position" data-modal>
                         <div class="modal">
-                            <!-- <div class="data-modal-close-div"> -->
-                                <button class="data-modal-close-button" data-modal-close>
-                                    <svg class="icon" width="32" height="32">
-                                        <use href="./images/icons.svg#icon-close"></use>
-                                    </svg>
-                                </button>
-                                <!-- <p>hola mujndo</p> -->
-                            <!-- </div> -->
+                            <div class="container-form">
+                                <div class="data-modal-close-div">
+                                    <button class="data-modal-close-button" data-modal-close>
+                                        <svg class="icon icon-form icon-close-button" width="32" height="32">
+                                            <use href="./images/icons.svg#icon-close"></use>
+                                        </svg>
+                                    </button>
+                                    <!-- <p>hola mujndo</p> -->
+                                </div>
+                                <!-- <div> -->
+                                    <h3 class="title-modal-backdrop">Deje sus datos, nos contactaremos con usted</h3>
+                                    <form class="form-modal-backdrop">
+                                        <label class="label-modal-backdrop" for="name-form">Nombre</label>
+                                        <div class="div-input">
+                                            <div class="div-input-icon">
+                                                <svg class="icon icon-form icon-person" width="32" height="32">
+                                                    <use href="./images/icons.svg#icon-person"></use>
+                                                </svg>
+                                            </div>
+                                            <input
+                                                class="input-modal-backdrop"
+                                                id="name-form"
+                                                type="text"
+                                                name="name"
+                                                required
+                                                autofocus
+                                                autocomplete="on"
+                                                minlength="3"
+                                                pattern="[A-Za-zÀ-ÿ]+"
+                                                placeholder="TEST"
+                                            />
+                                        </div>
+                                        <label class="label-modal-backdrop" for="phone-form"> Teléfono</label>
+                                        <div class="div-input">
+                                            <div class="div-input-icon">
+                                                <svg class="icon icon-form icon-phone" width="32" height="32">
+                                                    <use href="./images/icons.svg#icon-phone-form"></use>
+                                                </svg>
+                                            </div>
+                                            <input
+                                                class="input-modal-backdrop"
+                                                id="phone-form"
+                                                type="tel"
+                                                name="phone"
+                                                required
+                                                autocomplete="on"
+                                                minlength="7"
+                                                maxlength="10"
+                                                pattern="^[0-9]+$"
+                                                title=""
+                                            />
+                                        </div>
+                                        <label class="label-modal-backdrop" for="email-form"> E-mail</label>
+                                        <div class="div-input">
+                                            <div class="div-input-icon">
+                                                <svg class="icon icon-form icon-email" width="32" height="32">
+                                                    <use href="./images/icons.svg#icon-email-form"></use>
+                                                </svg>
+                                            </div>
+                                            <input
+                                                class="input-modal-backdrop"
+                                                id="email-form"
+                                                type="email"
+                                                name="email"
+                                                required
+                                                autocomplete="on"
+                                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                            />
+                                        </div>
+                                        <!-- <label class="label-modal-backdrop" for="">Comentarios</label>
+                                        <input class="input-modal-backdrop" id="" type="feedback" name="comments" required rows="5" placeholder="Introduzca el texto"/> -->
+                                        <label class="label-modal-backdrop" for="comments-form"> Comentarios</label>
+                                        <textarea
+                                            class="textarea-modal-backdrop textarea-modal-backdrop-color"
+                                            name="comments"
+                                            id="comments-form"
+                                            cols="10"
+                                            rows="7"
+                                            required
+                                            placeholder="Introduzca el texto"
+                                        ></textarea>
+                                        <div class="privacy-policy-div">
+                                            <input class="input-privacy-policy" type="checkbox" name="privacy-policy" id="privacy-policy" />
+                                            <label class="privacy-policy-label" for="privacy-policy"
+                                                >Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones</label
+                                            >
+                                        </div>
+                                        <button class="section-menu-links button-form" type="submit">Enviar</button>
+                                    </form>
+                                <!-- </div> -->
+                            </div>
                         </div>
                     </div>
                     <!-- test -->
