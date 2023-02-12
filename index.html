@@ -69,18 +69,19 @@
                     <!-- test -->
                     <div class="backdrop is-hidden backdrop-position" data-modal>
                         <div class="modal">
-                            <div class="container-form">
-                                <div class="data-modal-close-div">
-                                    <button class="data-modal-close-button" data-modal-close>
-                                        <svg class="icon icon-form-close icon-close-button" width="32" height="32">
+                            <!-- <div class="container-form"> -->
+                                <!-- <div class="data-modal-close-div"> -->
+                                    <button title="perform" class="data-modal-close-button" data-modal-close>
+                                        <span><svg class="icon icon-form-close icon-close-button" width="32" height="32">
                                             <use href="./images/icons.svg#icon-close"></use>
                                         </svg>
+                                        </span>
                                     </button>
                                     <!-- <p>hola mujndo</p> -->
-                                </div>
+                                <!-- </div> -->
                                 <!-- <div> -->
-                                <h3 class="title-modal-backdrop">Deje sus datos, nos contactaremos con usted</h3>
                                 <form class="form-modal-backdrop">
+                                    <h3 class="title-modal-backdrop">Deje sus datos, nos contactaremos con usted</h3>
                                     <label class="label-modal-backdrop" for="name-form" href="#name-form">Nombre</label>
                                     <div class="div-input">
                                         <div class="div-input-icon">
@@ -148,18 +149,19 @@
                                         required
                                         placeholder="Introduzca el texto"
                                     ></textarea>
-                                    <label class="privacy-policy-label" for="privacy-policy"></label>
                                     <div class="div-input">
                                         <div class="div-input-icon privacy-policy-div">
-                                            <input class="input-privacy-policy" type="checkbox" name="privacy-policy" required id="privacy-policy" />
-                                            <span class="icon-span">
-                                                <svg class="icon icon-checkbox" width="16" height="15">
-                                                    <use href="./images/icons.svg#icon-checkbox"></use>
-                                                </svg>
-                                            </span>
-                                            <span class="privacy-policy-span privacy-policy-span2">
-                                                Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones
-                                            </span>
+                                            <label class="privacy-policy-label">
+                                                <input class="input-privacy-policy" type="checkbox" name="privacy-policy" required />
+                                                <span class="icon-span">
+                                                    <svg class="icon-checkbox" width="16" height="15">
+                                                        <use href="./images/icons.svg#icon-checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="privacy-policy-span privacy-policy-span2">
+                                                    Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones
+                                                </span>
+                                            </label>
                                         </div>
                                     </div>
                                     <button class="button-form" type="submit">Enviar</button>
@@ -509,6 +511,37 @@
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div class="footer-subscription">
+                    <!-- footer-websites-list-icons -->
+                    <form class="footer-form">
+                        <h3 class="footer-subscription-titles">SUSCRÍBASE al boletín informativo</h3>
+                        <div class="list-none footer-subscription-list-icons-links">
+                            <div class="list-icons-subscription list-icons-subscription-size">
+                                <label class="label-subscription-backdrop" for="email-footer"> </label>
+                                <div class="div-input-footer">
+                                    <input
+                                        class="input-footer-backdrop"
+                                        id="email-footer"
+                                        type="email"
+                                        name="email"
+                                        required
+                                        autocomplete="on"
+                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                        placeholder="Correo electrónico"
+                                    />
+                                </div>
+                            </div>
+                            <div class="list-icons-subscription list-icons-subscription-size">
+                                <button type="submit" class="button-footer button-footer-active">
+                                    <span class="footer-button__label">Suscríbase</span>
+                                    <svg class="footer-button__icon footer-button__icon--end" width="24" height="24">
+                                        <use href="./images/icons.svg#icon-telegram"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </footer>
